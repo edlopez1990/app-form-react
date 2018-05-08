@@ -1,8 +1,57 @@
-import React from 'react';
+import React, { Component } from "react"
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
+import { Provider } from "react-redux"
+
+import Dashboard from "./pages/Dashboard"
+import PrivateRoute from "./components/routes/PrivateRoute"
+import store from "./store"
+import actions from "./actions"
+import Login from "./pages/Login"
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class Error404 extends Component {
+  render() {
+    return(
+      <div> error </div>
+    )
+  }
+}
+class Routes extends Component {
+constructor(props) {
+    super(props)
+}
+componentWillMount() {
+}
+render() {
+    const handleFunctions = {
+      user: {
+        logout: this.handleUserLogout
+      }
+    }
+    return(
+      <Provider store={store}>
+        <Router>
+          <div id="wrapper-app" className="wrapper-app">
+            <Switch>
+              <Route exact path="/" component={Login} />    
+              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <Route component={Error404} />
+            </Switch>
+          </div>
+        </Router>
+      </Provider>
+    )
+  }
+}
+
+ReactDOM.render(
+  <Routes />,
+  document.getElementById("root")
+)
+
 registerServiceWorker();
