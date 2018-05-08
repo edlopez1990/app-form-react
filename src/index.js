@@ -12,6 +12,7 @@ import PrivateRoute from "./components/routes/PrivateRoute"
 import store from "./store"
 import actions from "./actions"
 import Login from "./pages/Login"
+import Form from "./pages/Form/Form"
 import registerServiceWorker from './registerServiceWorker';
 
 class Error404 extends Component {
@@ -39,7 +40,8 @@ render() {
           <div id="wrapper-app" className="wrapper-app">
             <Switch>
               <Route exact path="/" component={Login} />    
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/dashboard" component={Dashboard} />      
+              <Route exact path="/form" component={Form} />          
               <Route component={Error404} />
             </Switch>
           </div>
