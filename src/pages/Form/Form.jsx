@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-
+import '../../assets/css/pages/steps.css';
+import '../../assets/js/js.js';
 class Form extends Component {
 	constructor(props){
 		super(props)
@@ -11,110 +12,83 @@ class Form extends Component {
 
 	render(){
 		return( 
-			<div className="form-style-5">
-				<form>
-					<fieldset>
-					<legend><span className="number">1</span> Nombre Comersial</legend>
-
-					<label for="job">Categorias:</label>
-						<select id="job" name="field4">
-							<optgroup label="Categoria Principal">
-							  <option value="fishkeeping">Restaurante</option>
-							  <option value="reading">Alojamiento</option>
-							  <option value="boxing">Recración</option>
-							  <option value="debate">Agencia de Viaje</option>
-							  <option value="gaming">Operador turistico</option>
-							  <option value="snooker">Aventura</option>
-							</optgroup>
-							<optgroup label="Categoria Secundaria">
-							  <option value="fishkeeping">Restaurante</option>
-							  <option value="reading">Alojamiento</option>
-							  <option value="boxing">Recración</option>
-							  <option value="debate">Agencia de Viaje</option>
-							  <option value="gaming">Operador turistico</option>
-							  <option value="snooker">Aventura</option>
-							</optgroup>
-						</select>   
-					<label for="job">Clasificación de las Categorias:</label>
-						<select id="job" name="field4">
-							<optgroup label="Restaurante">
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							</optgroup>
-							<optgroup label="Recreación">
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							</optgroup>
-							<optgroup label="Operador turistico">
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							</optgroup>
-							<optgroup label="Alojamiento">
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							</optgroup>
-							<optgroup label="Agencia de viaje">
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							</optgroup>
-							<optgroup label="Aventura">
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							  <option value="fishkeeping">Loremp ipsum</option>
-							</optgroup>
-						</select>  
-  
-
-					<label for="job">Tarjetas aceptadas en el establecimiento:</label>
-					<input type="text" name="field1" placeholder="Dirección " />
-					<input type="text" name="field1" placeholder="Ciudad / pueblo " />
-					<input type="email" name="field2" placeholder="Departamento" />
-					<input type="email" name="field2" placeholder="Pais" />
-					<label for="job">Ubicacion geografica:</label>
-					<select id="job" name="field4">
-							<optgroup label="">
-							  <option value="fishkeeping">playa, estero  y bahia</option>
-							  <option value="reading">Lagos / Lagunas</option>
-							  <option value="boxing">Montañas / cerros</option>
-							  <option value="debate">Ciudad</option>
-							  <option value="gaming">Pueblo</option>
-							</optgroup>
-						</select>  
-					<input type="email" name="field2" placeholder="Telefono" />
-					<input type="email" name="field2" placeholder="Celular" />
-					<input type="email" name="field2" placeholder="Email" />
-					<input type="email" name="field2" placeholder="Whatsapp institucional" />
-					<input type="email" name="field2" placeholder="Pagina Web" />
-					<input type="email" name="field2" placeholder="Instagram" />
-					<input type="email" name="field2" placeholder="Facebook" />
-					<input type="email" name="field2" placeholder="Logotipo completo" />
-					</fieldset>
-				
-					<input type="submit" value="Enviar" />
-				</form>
+			<div className="container">
+			   
+			    <div id="steps" className="setup-panel">
+				  <div className="step" data-desc="Listing information"><a href="#step-1" type="button" className="btn btn-success btn-circle">1</a></div>
+				  <div className="step" data-desc="Photos & Details"><a href="#step-2" type="button" className="btn btn-default btn-circle" disabled="disabled">2</a></div>
+				  <div className="step active" data-desc="Review & Post"><a href="#step-3" type="button" className="btn btn-default btn-circle" disabled="disabled">3</a></div>
+				  <div className="step" data-desc="Your order"><a href="#step-4" type="button" className="btn btn-default btn-circle" disabled="disabled">4</a></div>
+				</div>
+			    <form role="form">
+			        <div className="panel panel-primary setup-content" id="step-1">
+			            <div className="panel-heading">
+			                 <h3 className="panel-title">Shipper</h3>
+			            </div>
+			            <div className="panel-body">
+			                <div className="form-group">
+			                    <label className="control-label">First Name</label>
+			                    <input maxLength="100" type="text" required="required" className="form-control" placeholder="Enter First Name" />
+			                </div>
+			                <div className="form-group">
+			                    <label className="control-label">Last Name</label>
+			                    <input maxLength="100" type="text" required="required" className="form-control" placeholder="Enter Last Name" />
+			                </div>
+			                <button className="btn btn-primary nextBtn pull-right" type="button">Next</button>
+			            </div>
+			        </div>
+			        
+			        <div className="panel panel-primary setup-content" id="step-2">
+			            <div className="panel-heading">
+			                 <h3 className="panel-title">Destination</h3>
+			            </div>
+			            <div className="panel-body">
+			                <div className="form-group">
+			                    <label className="control-label">Company Name</label>
+			                    <input maxLength="200" type="text" required="required" className="form-control" placeholder="Enter Company Name" />
+			                </div>
+			                <div className="form-group">
+			                    <label className="control-label">Company Address</label>
+			                    <input maxLength="200" type="text" required="required" className="form-control" placeholder="Enter Company Address" />
+			                </div>
+			                <button className="btn btn-primary nextBtn pull-right" type="button">Next</button>
+			            </div>
+			        </div>
+			        
+			        <div className="panel panel-primary setup-content" id="step-3">
+			            <div className="panel-heading">
+			                 <h3 className="panel-title">Schedule</h3>
+			            </div>
+			            <div className="panel-body">
+			                <div className="form-group">
+			                    <label className="control-label">Company Name</label>
+			                    <input maxLength="200" type="text" required="required" className="form-control" placeholder="Enter Company Name" />
+			                </div>
+			                <div className="form-group">
+			                    <label className="control-label">Company Address</label>
+			                    <input maxLength="200" type="text" required="required" className="form-control" placeholder="Enter Company Address" />
+			                </div>
+			                <button className="btn btn-primary nextBtn pull-right" type="button">Next</button>
+			            </div>
+			        </div>
+			        
+			        <div className="panel panel-primary setup-content" id="step-4">
+			            <div className="panel-heading">
+			                 <h3 className="panel-title">Cargo</h3>
+			            </div>
+			            <div className="panel-body">
+			                <div className="form-group">
+			                    <label className="control-label">Company Name</label>
+			                    <input maxLength="200" type="text" required="required" className="form-control" placeholder="Enter Company Name" />
+			                </div>
+			                <div className="form-group">
+			                    <label className="control-label">Company Address</label>
+			                    <input maxLength="200" type="text" required="required" className="form-control" placeholder="Enter Company Address" />
+			                </div>
+			                <button className="btn btn-success pull-right" type="submit">Finish!</button>
+			            </div>
+			        </div>
+			    </form>
 			</div>
 		)
 	}

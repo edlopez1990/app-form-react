@@ -1,5 +1,5 @@
 {
-  "name": "dashboard-rupert",
+  "name": "app-form-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +9,8 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
     "redux": "^3.7.2",
-    "redux-store-sessionstorage": "^0.4.5"
+    "redux-store-sessionstorage": "^0.4.5",
+    "watchman": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

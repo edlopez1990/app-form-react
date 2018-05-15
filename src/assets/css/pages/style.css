@@ -1820,13 +1820,12 @@ table tr:last-child td {
  * 14. Panel
  */
 .panel {
-  border-right: 1px solid rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   float: left;
   min-height: 100%;
-  padding: 30px;
+  width: 100%;
 }
 
 @media (max-width: 576px) {
