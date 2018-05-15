@@ -297,14 +297,6 @@ select {
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-}
-
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -519,12 +511,10 @@ a {
   margin: 0 -15px;
 }
 
-.row > div {
+/*.row > div {
   flex-grow: 1;
   margin: 0 15px;
-  width: 50%;
-}
-
+  width: 50%; }*/
 /**
  * 03. Structure
  */

@@ -54,8 +54,8 @@ $grey: hsl(226,10%,55%);
 $disa: hsl(226,15%,83%);
 
 #steps {
-  width: 505px;
-  margin: 50px auto; 
+  width: 71%;
+  margin: 125px auto; 
 }
 
 
@@ -68,7 +68,7 @@ body {
 .step {
   width: 48px;
   height: 48px;
-  background-color: $white;
+  //background-color: $white;
   display: inline-block;
   border: 4px solid;
   border-color: transparent;
@@ -91,11 +91,11 @@ body {
   height: 3px;
   display: block;
   background-color: $white;
-  transform: translate(-90px, 20px);
+  transform: translate(-90px, 28px);
   content: '';  
 }
 .step:after {
-  width: 150px;
+  width: 163px;
   display: block;
   transform: translate(-55px, 3px);
   
@@ -107,10 +107,23 @@ body {
 .step:first-child:after {
   transform: translate(-55px, -1px);  
 }
-.step.active {
-  border-color: $blue;
-  
-  color: $blue;
+.step.active   {
+ // border-color: $blue;  
+  //color: $blue;
+
+  a{
+    border-color: #73b5e8;
+    color: #73b5e8;
+    background-color: #fff;
+    border: 3px solid;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    vertical-align: middle;
+    text-align: center;
+    padding: 13px;
+  }
+
 }
 .step.active:before {
   background: linear-gradient(to right, $green 0%,
@@ -120,11 +133,37 @@ body {
   color: $blue;  
 }
 .step.done {
-  background-color: $green;
-  border-color: $green;
   
-  color: $white;
+
+  a.btn-success{    
+    border-color: #73b5e8 !important;
+    color: #73b5e8 !important;
+    background-color: #fff  !important;
+    border: 3px solid;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    vertical-align: middle;
+    text-align: center;
+    padding: 13px;
+  }
+  a.btn-default{
+    background-color: #73b5e8 ;
+    border-color: $green;  
+    color: $white;
+    border: 3px solid;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    vertical-align: middle;
+    text-align: center;
+    padding: 13px;
+  }
 }
 .step.done:before {
-  background-color: $green;  
+  background-color: #73b5e8 ;  
+}
+
+.logo-form{
+  margin-top: 5%;
 }
